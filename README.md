@@ -1,6 +1,6 @@
 # LeetCode Solutions
 
-A collection of my accepted LeetCode solutions, organized by difficulty.
+A collection of my accepted LeetCode solutions, organized by topic.
 
 - **Language:** Python (primary)
 - **Problems Solved:** 150+
@@ -18,20 +18,25 @@ A collection of my accepted LeetCode solutions, organized by difficulty.
 
 ```
 LeetCode/
-âââ Easy/
-âââ Medium/
-âââ Hard/
+├── Sliding Window/
+│   └── 1004. Max Consecutive Ones III/
+│       ├── 1004. Max Consecutive Ones III.py
+│       └── 1004. Max Consecutive Ones III.md
+├── Tree/
+│   └── 236. Lowest Common Ancestor of a Binary Tree/
+│       ├── 236. Lowest Common Ancestor of a Binary Tree.py
+│       └── 236. Lowest Common Ancestor of a Binary Tree.md
+└── ...
 ```
 
-Each file is named `<problem-number>. <Problem Title>.py` and contains my latest accepted submission for that problem.
+Each problem gets its own subfolder named `<problem-number>. <Problem Title>`, placed under the single topic folder that best matches its core technique (e.g. a problem tagged both `Array` and `Sliding Window` lands under `Sliding Window`, since that's the more specific, technique-defining tag). Inside each subfolder:
+
+- `<problem-number>. <Problem Title>.<ext>` — my latest accepted submission
+- `<problem-number>. <Problem Title>.md` — problem statement, difficulty, the chosen folder topic, and the full list of LeetCode topic tags
 
 ## How this repo is maintained
 
-Older solutions (solved before this repo existed) were bulk-exported using a custom Python script (`leetcode_export.py`) that pulls accepted submissions directly from LeetCode's API and sorts them into the folders above.
-
-Going forward, new solutions are auto-committed using the [LeetHub]([https://github.com/arunbhardwaj/LeetCode-Sync](https://github.com/raphaelheinz/LeetHub-3.0)) browser extension, which pushes a solution to this repo automatically whenever a submission is accepted on LeetCode.
-
-Because of this, folder structure for newer problems may look slightly different (subfolders with a README per problem) compared to the flat files from the initial bulk export.
+Solutions were bulk-exported using a custom Python script (`leetcode_export.py`) that pulls accepted submissions directly from LeetCode's API, picks the single most relevant topic for each problem from its full tag list using a priority ranking (specific techniques like `Sliding Window` or `Dynamic Programming` outrank generic tags like `Array` or `Math`), and writes the solution and a README into that topic's folder.
 
 ## Why this repo exists
 
