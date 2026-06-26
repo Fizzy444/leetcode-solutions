@@ -41,3 +41,7 @@ Solutions were bulk-exported using a custom Python script (`leetcode_export.py`)
 ## Why this repo exists
 
 Tracking DSA practice for placement preparation, and keeping a public record of consistent problem-solving over time.
+
+
+## Extension for firefox:
+[Firefox Addon](https://addons.mozilla.org/en-US/firefox/addon/leethub-v4-by-fizzy444/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
