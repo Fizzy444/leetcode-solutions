@@ -3,7 +3,7 @@
 A collection of my accepted LeetCode solutions, organized by topic.
 
 - **Language:** Python (primary)
-- **Problems Solved:** 150+
+- **Problems Solved:** 200+
 - **Topics Covered:**
   - Arrays & Strings
   - Hash Maps
