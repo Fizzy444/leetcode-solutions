@@ -1,29 +1,17 @@
 class Solution:
-    def minimumDeletions(self, nums: List[int]) -> int:
+    def minimumDeletions(self, nums):
         n = len(nums)
-        left = 0
-        right = 0
-        
-        for i in range(1, n):
-            if nums[i] < nums[left]:
-                left = i
-                
-            if nums[i] > nums[right]:
-                right = i
-                
-        if left < right:
-            left, right = right, left
-            
-        ans = n
-        
-        for i in range(n + 1):
-            extra = 0
-            
-            if right >= i:
-                extra = n - right
-            elif left >= i:
-                extra = n - left
-                
-            ans = min(ans, i + extra)
-            
-        return ans
+
+        minIndex = nums.index(min(nums))
+        maxIndex = nums.index(max(nums))
+
+        left = min(minIndex, maxIndex)
+        right = max(minIndex, maxIndex)
+
+        front = right + 1
+
+        back = n - left
+
+        frontBack = (left + 1) + (n - right)
+
+        return min(front, back, frontBack)
